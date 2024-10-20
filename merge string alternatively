@@ -1,0 +1,26 @@
+
+solution:
+string mergeAlternately(string word1, string word2) {
+        int m=word1.length(),n=word2.length();
+        string res;
+        
+        int i=0,j=0;
+        int k=0;
+        while(i<m && j<n){
+            if(i==j){
+                res+=word1[i++];
+            }
+            else{
+                res+=word2[j++];
+            }
+        }
+        while(i<m){
+            res+=word1[i++];
+        }
+        while(j<n){
+            res+=word2[j++];
+        }
+        return res;
+
+        
+    }
